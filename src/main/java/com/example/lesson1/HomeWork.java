@@ -16,7 +16,19 @@ public class HomeWork {
         printString("abcd", 5); // abcdabcdabcdabcdabcd
 
         int[] arr = createArray(5, 10);
-        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
+        System.out.println(Arrays.toString(arr));// [10, 10, 10, 10, 10]
+
+        int[] mas = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        invertArray(mas);
+        System.out.println(Arrays.toString(mas));
+
+        int[] mas2 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
+        multiplicationArray(mas2);
+        System.out.println(Arrays.toString(mas2));
+
+        int[][] matrix = new int[4][4];
+        diagonals(matrix);
+
 
         int[][] array = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
         int x = array[2][3];
@@ -52,7 +64,40 @@ public class HomeWork {
 
     private static int[] createArray(int len, int initialValue) {
        // должен вернуть массив длины len, каждое значение которого равно initialValue
-        return null;
+        int[] array = new int[len];
+        for (int i = 0; i < len; i++) {
+            array[i] = initialValue;
+        }
+        return array;
+    }
+
+    private static void invertArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0){
+                array[i] = 1;
+            }
+            else{
+                array[i] = 0;
+            }
+        }
+    }
+
+    private static void multiplicationArray (int[] array){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 6){
+                array[i] = array[i] * 2; ;
+            }
+        }
+    }
+
+    private static void diagonals(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i][i] = 1;
+            matrix[i][matrix.length-1-i] = 1;
+        }
+        for (int[] row : matrix) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 
     /**
@@ -68,6 +113,9 @@ public class HomeWork {
      *
      * 4. Подготовить вопросы к следующему уроку.
      */
+
+
+
 
 
 }
