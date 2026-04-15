@@ -69,15 +69,21 @@ public class HomeWork5 {
                 List<String> name = new ArrayList<>(phoneBook.keySet());
                 Collections.sort(name);
                 System.out.println("Все записи телефонного справочника");
-                for(int i = 0; i < name.size(); i++){
-                    String lastname = name.get(i);
-                    List<String> numbers = phoneBook.get(lastname);
+                for (String lastname : name) {
                     System.out.println(lastname);
-
-                    for(int j = 0; j < numbers.size(); j++){
-                        System.out.println(numbers.get(j));
+                    for (String number : phoneBook.get(lastname)) {
+                        System.out.println(number);
                     }
                 }
+//                for(int i = 0; i < name.size(); i++){
+//                    String lastname = name.get(i);
+//                    List<String> numbers = phoneBook.get(lastname);
+//                    System.out.println(lastname);
+//
+//                    for(int j = 0; j < numbers.size(); j++){
+//                        System.out.println(numbers.get(j));
+//                    }
+//                }
             }
         }
     }
