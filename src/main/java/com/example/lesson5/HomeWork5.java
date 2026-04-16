@@ -49,9 +49,12 @@ public class HomeWork5 {
                     System.out.println("Для такой фамилии телефонов нет");
                 }
                 else{
-                    for (int i = 0; i < numbers.size(); i++) {
-                        System.out.println(numbers.get(i));
+                    for (String number : numbers) {
+                        System.out.println(number);
                     }
+//                    for (int i = 0; i < numbers.size(); i++) {
+//                        System.out.println(numbers.get(i));
+//                    }
                 }
             }
             //remove
@@ -87,4 +90,6 @@ public class HomeWork5 {
             }
         }
     }
+
+
 }
